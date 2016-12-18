@@ -1,3 +1,11 @@
+# Exploratory Data Analysis - Week 1 Project
+This repository contains four plots generated from household power consumption data and the R script files that will generate each plot.  
+The plots are stored as `plot1.png`, `plot2.png`, etc., and the associated scripts are `plot1.R`, etc.  
+A script can be run by sourcing the associated file; the commands are not stored as functions.  
+Each script will look for the data as the file `household_power_consumption.txt` in the working directory. If it cannot be found, the data will be downloaded and unzipped into the working directory.  
+  
+The remainder of this document is the original readme from the course assignment:
+
 ## Introduction
 
 This assignment uses data from
