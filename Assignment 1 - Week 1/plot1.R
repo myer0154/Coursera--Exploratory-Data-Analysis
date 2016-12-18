@@ -13,6 +13,6 @@ HPC$Date <- as.Date(HPC$Date, format="%d/%m/%Y")
 HPC <- subset(HPC, Date == as.Date("2007-02-01") | Date == as.Date("2007-02-02"))
 
 # create a png device, plot the data to it, and then close the device to save the image
-png(filename = "plot1.png")
+png(filename = "plot1.png", width = 480, height = 480, units = "px")
 hist(HPC$Global_active_power, main = "Global Active Power", xlab = "Global Active Power (kilowatts)", col = "red")
 dev.off()
