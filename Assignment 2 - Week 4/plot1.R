@@ -5,8 +5,10 @@ if(!file.exists("./summarySCC_PM25.rds")) {
   file.remove("./temp_data.zip")
 }
 
-# read the source files
-pm25 <- readRDS("summarySCC_PM25.rds")
+# read the source files (if pm25 object does not already exist)
+if(!exists("pm25")) {
+  pm25 <- readRDS("summarySCC_PM25.rds")
+}
 
 # aggregate the data using Emissions as a function of year and apply the sum() function
 tot_emissions <- aggregate(Emissions ~ year, pm25, sum)
