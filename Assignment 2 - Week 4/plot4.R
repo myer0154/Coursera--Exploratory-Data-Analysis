@@ -13,6 +13,8 @@ if(!exists("SCC")) {
   SCC <- readRDS("Source_Classification_Code.rds")
 }
 
+# Subset the SCC codes that belong to coal combustion by using a regex in the EI.Sector column
+# then aggregate Emissions by year and sum, as in previous plots
 coalSCC <- SCC[grep("coal", SCC$EI.Sector, ignore.case = TRUE), ]
 coal_emissions <- aggregate(Emissions ~ year, pm25[pm25$SCC %in% coalSCC$SCC, ], sum)
 
